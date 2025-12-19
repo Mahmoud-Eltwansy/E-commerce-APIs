@@ -53,7 +53,7 @@ class ProductService
         return $this->prepareProductData($product);
     }
 
-    public function prepareProductData(Product $product)
+    public static function prepareProductData(Product $product)
     {
         return [
             'id' => $product->id,

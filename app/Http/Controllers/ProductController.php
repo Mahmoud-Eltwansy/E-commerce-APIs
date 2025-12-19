@@ -28,7 +28,6 @@ class ProductController extends Controller
         if (!isset($product['price'])) {
             return response()->json($product, 404);
         }
-
         return response()->json($product);
     }
 }
