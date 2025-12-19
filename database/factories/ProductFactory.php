@@ -18,14 +18,14 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => json_encode([
+            'title' => [
                 'en' => fake('en')->realText(10),
                 'ar' => fake('ar_EG')->realText(10)
-            ]),
-            'description' => json_encode([
+            ],
+            'description' => [
                 'en' => fake('en')->realText(100),
                 'ar' => fake('ar_EG')->realText(100)
-            ]),
+            ],
             'price' => fake()->randomFloat(2, 100, 10000),
             'quantity' => fake()->numberBetween(10, 200)
         ];

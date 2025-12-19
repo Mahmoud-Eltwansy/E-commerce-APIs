@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -9,4 +10,8 @@ route::post('signin', [AuthController::class, 'singIn']);
 
 route::middleware('auth:sanctum')->group(function () {
     route::post('logout', [AuthController::class, 'logout']);
+
+    // Product Routes
+    route::get('products', [ProductController::class, 'index']);
+    route::get('products/{id}', [ProductController::class, 'show']);
 });
