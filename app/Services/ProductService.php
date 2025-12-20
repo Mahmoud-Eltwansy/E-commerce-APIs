@@ -70,4 +70,13 @@ class ProductService
             'image_url' => $product->image_url,
         ];
     }
+
+    public function invalidateProductsCache()
+    {
+        $totalPages = ceil(Product::count() / $this->productsPerPage);
+        for ($page = 1; $page <= $totalPages; $page++) {
+            $cacheKey = "products_page_{$page}_perpage_{$this->productsPerPage}";
+            Cache::forget($cacheKey);
+        }
+    }
 }

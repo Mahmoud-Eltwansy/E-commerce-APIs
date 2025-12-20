@@ -102,4 +102,10 @@ class CartService
             'message' => 'Item removed from cart successfully.'
         ];
     }
+
+    public function emptyCart($userId)
+    {
+        Cart::where('user_id', $userId)->delete();
+        Cache::forget(self::CACHE_KEY . $userId);
+    }
 }
