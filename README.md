@@ -80,18 +80,19 @@ EXIT;
 ```bash
 php artisan migrate
 ```
+### 7. Edit Your APP_URL
 
-### 7. Seed Database
+Change the APP_URL in `.env` file to match your url\
+If you are Laragon :`http://ecommerce-apis.test` \
+If you are using local server (eg. Xampp) : `http://localhost:8000` And Run `php artisan migrate`
+
+### 8. Seed Database
 
 ```bash
 php artisan db:seed
 ```
 
-### 8. Edit Your APP_URL
 
-Change the APP_URL in `.env` file to match your url\
-If you are Laragon :`http://ecommerce-apis.test` \
-If you are using local server (eg. Xampp) : `http://localhost:8000` And Run `php artisan migrate`
 ## API Endpoints
 
 ### Authentication
