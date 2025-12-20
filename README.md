@@ -2,6 +2,9 @@
 
 A RESTful API built with Laravel for an e-commerce platform, featuring user authentication, product management, shopping cart, and order processing.
 
+## Postman Collection Link 
+https://www.postman.com/meltwansy/public/collection/29812851-2322a7ad-ec60-4029-b487-928644b77235?action=share&creator=29812851
+
 ## Features
 
 - **Authentication**: User signup and signin with Laravel Sanctum
@@ -477,7 +480,5 @@ Authorization: Bearer {{token}}
 
 ------
 
-## Postman Collection Link 
-https://www.postman.com/meltwansy/public/collection/29812851-2322a7ad-ec60-4029-b487-928644b77235?action=share&creator=29812851
 
 ### This Project is Mady by Mahmoud Eltwansy
