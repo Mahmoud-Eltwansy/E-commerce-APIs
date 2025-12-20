@@ -28,6 +28,9 @@ class CartController extends Controller
     public function view(Request $request)
     {
         $cartItems = $this->cartService->getCartItems($request->user()->id);
+        if (isset($cartItems['error'])) {
+            return response()->json(['message' => $cartItems['error']], 200);
+        }
         return response()->json([
             'message' => 'Cart retrieved successfully.',
             'cart' => $cartItems

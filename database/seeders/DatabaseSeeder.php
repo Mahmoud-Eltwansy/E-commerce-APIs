@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Product::factory(5)->create()->each(function ($product) {
+        Product::factory(20)->create()->each(function ($product) {
             $product->addMediaFromUrl("https://robohash.org/{$product->id}?size=300x300")
                 ->toMediaCollection('products_images');
         });

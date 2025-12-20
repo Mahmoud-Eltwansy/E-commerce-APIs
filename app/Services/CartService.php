@@ -65,6 +65,9 @@ class CartService
         $cartItems = Cart::with('product.media')
             ->where('user_id', $userId)
             ->get();
+        if ($cartItems->isEmpty()) {
+            return ['error' => 'Cart is empty.'];
+        }
 
         $formattedItems = [];
         $total = 0;
@@ -79,7 +82,7 @@ class CartService
             $total_for_item = $cartItem->quantity * $cartItem->product->price;
             $total += $total_for_item;
         }
-        $formattedItems['total_cart_price'] = $total;
+        $formattedItems['total_cart_price'] = round($total, 2);
 
         Cache::put($cacheKey, $formattedItems, now()->addMinutes(30));
         return $formattedItems;
