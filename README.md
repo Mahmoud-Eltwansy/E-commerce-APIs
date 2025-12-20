@@ -20,6 +20,8 @@ https://www.postman.com/meltwansy/public/collection/29812851-2322a7ad-ec60-4029-
 - **Database**: MySQL
 - **Authentication**: Laravel Sanctum (API tokens)
 - **ORM**: Eloquent
+- **Media Management**: Spatie Media Library
+- **Translations**: Spatie Translatable
 
 ## Prerequisites
 
